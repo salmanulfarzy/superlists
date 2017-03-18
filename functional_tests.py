@@ -53,7 +53,7 @@ class NewVisitorTest(unittest.TestCase):
 
         # Edith woders whether the iste will remember her list.
         # Then she sees the site has generated a unique URL for her
-        sel.fail('Finishe the test!')
+        self.fail('Finish the test!')
 
         # She visits that URL - her to-do list is still there.
 
