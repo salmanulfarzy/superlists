@@ -101,12 +101,12 @@ class NewVisitorTest(LiveServerTestCase):
         self.wait_for_row_in_list_table('1: Buy Milk')
 
         #  Francis get his own own unique URL
-        francis_list_url = self.browse.current_url
-        sellf.assertRegex(francis_list_url, '/lists/.+')
+        francis_list_url = self.browser.current_url
+        self.assertRegex(francis_list_url, '/lists/.+')
         self.wait_for_row_in_list_table('1: Buy Milk')
 
         # Again, there is no trace of Edith's list
-        page_text = self.browse.find_element_by_tag_name('body').text
+        page_text = self.browser.find_element_by_tag_name('body').text
         self.assertNotIn('Buy peacock feathers', page_text)
         self.assertIn('Buy Milk', page_text)
 
