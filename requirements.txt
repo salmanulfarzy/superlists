@@ -1,4 +1,1 @@
 Django==1.11b1
-pkg-resources==0.0.0
-pytz==2016.10
-selenium==3.3.1
