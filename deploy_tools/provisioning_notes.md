@@ -25,7 +25,7 @@ sudo apt-get install nginx git python3.6 python3.6-venv
 
 ## Folder structure
 Assume we have a user accuont at /home/username
-
+```
 /home/username
 |__ sites
     |__ SITENAME 
@@ -33,4 +33,4 @@ Assume we have a user accuont at /home/username
         |__ source
         |__ static
         |__ virtualenv
-
+```
