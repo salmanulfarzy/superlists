@@ -3,3 +3,4 @@ geckodriver.log
 env/
 __pycache__
 *.pyc
+fabric-test/
