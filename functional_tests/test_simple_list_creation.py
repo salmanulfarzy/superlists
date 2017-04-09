@@ -21,11 +21,9 @@ class NewVisitorTest(FunctionalTest):
                 'Enter a to-do item')
 
         # Edith types "But peacock feathers: into a text box.
-        inputbox.send_keys('Buy peacock feathers')
         # When she hits enter, the page updates, and now the page lists
         # 1: Buy peacockfeathers" as an item.in to-do list
-        inputbox.send_keys(Keys.ENTER)
-        self.wait_for_row_in_list_table('1: Buy peacock feathers')
+        self.add_list_item('Buy peacock feathers')
 
         # There is still a text box inviting her to add another item.
         # She enters "Use peacock feathers to make a fly"
@@ -48,10 +46,7 @@ class NewVisitorTest(FunctionalTest):
         self.browser.get(self.live_server_url)
 
         # Edith start a new to do list
-        inputbox = self.get_item_input_box()
-        inputbox.send_keys('Buy peacock feathers')
-        inputbox.send_keys(Keys.ENTER)
-        self.wait_for_row_in_list_table('1: Buy peacock feathers')
+        self.add_list_item('Buy peacock feathers')
 
         # She notices that her list has a unique URL
         edith_list_url = self.browser.current_url
@@ -71,10 +66,7 @@ class NewVisitorTest(FunctionalTest):
         self.assertNotIn('make a fly', page_text)
 
         # Francis starts a new list by entering a new item.
-        inputbox = self.get_item_input_box()
-        inputbox.send_keys('Buy Milk')
-        inputbox.send_keys(Keys.ENTER)
-        self.wait_for_row_in_list_table('1: Buy Milk')
+        self.add_list_item('Buy Milk')
 
         #  Francis get his own own unique URL
         francis_list_url = self.browser.current_url
