@@ -32,3 +32,6 @@ def new_list(request):
         context = {"form": form}
         return render(request, 'home.html', context)
 
+def my_lists(request, email):
+    return render(request, 'my_lists.html')
+

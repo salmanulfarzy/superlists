@@ -56,6 +56,10 @@ class NewListTest(TestCase):
         self.assertEqual(List.objects.count(), 0)
         self.assertEqual(List.objects.count(), 0)
 
+    def test_my_lists_url_renderes_my_lists_template(self):
+        response = self.client.get('/lists/users/a@b.com/')
+        self.assertTemplateUsed(response, 'my_lists.html')
+
 
 class ListViewTest(TestCase):
 
