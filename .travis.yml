@@ -8,7 +8,10 @@ env:
 
 install:
     - pip install -r requirements.txt
+    - pip install coveralls
 
 script:
-    - python manage.py test lists
-    - python manage.py test accounts
+    coverage run --source=lists,accounts manage.py test lists accounts
+
+after_success:
+    coveralls
