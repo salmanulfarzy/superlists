@@ -1,6 +1,7 @@
-.. image:: https://img.shields.io/badge/heroku-deployed-brightgreen.svg
-      :target: https://sfarzy-superlists.herokuapp.com
-      :alt: Heroku
+.. class:: no-web no-pdf
+
+|travis| |heroku|
+
 
 Superlists
 =========
@@ -44,3 +45,11 @@ To run the functional test you should have the latest geckodriver_ for firefox i
 .. _virtualenv: https://pypi.python.org/pypi/virtualenv
 .. _venv: https://docs.python.org/3/library/venv.html
 .. _geckodriver: https://github.com/mozilla/geckodriver/releases/latest
+
+.. |travis| image:: https://travis-ci.org/sfarzy/superlists.svg?branch=master
+    :target: https://travis-ci.org/sfarzy/superlists
+    :alt: travis
+
+.. |heroku| image:: https://img.shields.io/badge/heroku-deployed-blue.svg
+      :target: https://sfarzy-superlists.herokuapp.com
+      :alt: Heroku
