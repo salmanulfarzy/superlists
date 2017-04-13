@@ -1,6 +1,6 @@
 .. class:: no-web no-pdf
 
-|travis| |heroku|
+|travis| |heroku| |coveralls|
 
 
 Superlists
@@ -53,3 +53,7 @@ To run the functional test you should have the latest geckodriver_ for firefox i
 .. |heroku| image:: https://img.shields.io/badge/heroku-deployed-blue.svg
       :target: https://sfarzy-superlists.herokuapp.com
       :alt: Heroku
+
+.. |coveralls| image:: https://coveralls.io/repos/github/sfarzy/superlists/badge.svg?branch=master
+      :target: https://coveralls.io/github/sfarzy/superlists?branch=master
+      :alt: Coveralls
