@@ -1,5 +1,6 @@
 from .base import FunctionalTest
 from selenium.webdriver.common.keys import Keys
+from .list_page import ListPage
 
 
 class LayoutAndStylingTest(FunctionalTest):
@@ -10,14 +11,14 @@ class LayoutAndStylingTest(FunctionalTest):
         self.browser.set_window_size(1024, 768)
 
         # She notices the input box is nicely centered
-        inputbox = self.get_item_input_box()
+        inputbox = ListPage(self).get_item_input_box()
         self.assertAlmostEqual(
                 inputbox.location['x'] + inputbox.size['width'] / 2, 512,
                 delta = 10
                 )
         # Shre start a new list and sees the input is nicely centered
-        self.add_list_item('testing')
-        inputbox = self.get_item_input_box()
+        ListPage(self).add_list_item('testing')
+        inputbox = ListPage(self).get_item_input_box()
         self.assertAlmostEqual(
                 inputbox.location['x'] + inputbox.size['width'] / 2, 512,
                 delta = 10
