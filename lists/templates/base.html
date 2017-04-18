@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-US-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>To-Do lists</title>
     <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -20,7 +20,7 @@
               <li><a href="{% url 'my_lists' user.email %}">My lists</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li class="navbar-text">Loggd in as {{ user.email }}</li>
+              <li class="navbar-text">Logged in as {{ user.email }}</li>
               <li><a href="{% url 'logout' %}">Logout</a><li>
             </ul>
           {% else %}
