@@ -209,7 +209,7 @@ class ListViewTest(TestCase):
     def test_for_invalid_input_shows_error_on_page(self):
         response = self.post_invalid_input()
         self.assertContains(response, escape(EMPTY_ITEM_ERROR))
- 
+
     def test_duplicate_item_validation_errors_end_up_on_lists_page(self):
         list1 = List.objects.create()
         item1 = Item.objects.create(list=list1, text='Text Item')
@@ -223,3 +223,24 @@ class ListViewTest(TestCase):
         self.assertTemplateUsed(response, 'list.html')
         self.assertEqual(Item.objects.all().count(), 1)
 
+
+class ShareListTest(TestCase):
+
+    def test_POST_redirects_to_list_page(self):
+        list_ = List.objects.create()
+        response = self.client.post(
+                f'/lists/{list_.id}/share',
+                data={'sharee': 'a@b.com'}
+                )
+        self.assertRedirects(response, list_.get_absolute_url())
+
+    def test_list_shared_with_user(self):
+        user = User.objects.create(email='a@b.com')
+        list_ = List.objects.create()
+
+        self.client.post(
+                f'/lists/{list_.id}/share',
+                data={'sharee': 'a@b.com'}
+                )
+
+        self.assertIn(user, list_.shared_with.all())

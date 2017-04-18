@@ -39,7 +39,7 @@ class SharingTest(FunctionalTest):
 
         #  She shares her list.
         #  The page updates to sat it's shared with Gandalf
-        list_page.share_list_with('gandal@example.com')
+        list_page.share_list_with('gandalf@example.com')
 
         #  Gandalf now goes to the lists page with his browser
         self.browser = gandalf_browser
@@ -55,7 +55,7 @@ class SharingTest(FunctionalTest):
             ))
 
         #  He adds an item to the list
-        list_page.add_list_item('Hi Edith')
+        list_page.add_list_item('Hi Edith!')
 
         #  When Edith refreshes th page, she see Gandalf's addition
         self.browser = edith_browser
