@@ -90,3 +90,9 @@ class ListModelTest(TestCase):
     def test_list_owner_is_optional(self):
         List().full_clean() # Should not raise
 
+    def test_can_share_with_another_user(self):
+        user = User.objects.create(email='a@b.com')
+        list_ = List.objects.create()
+        list_.shared_with.add('a@b.com')
+        stored_list = List.objects.get(id=list_.id)
+        self.assertIn(user, stored_list.shared_with.all())
