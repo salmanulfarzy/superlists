@@ -1,0 +1,9 @@
+{
+    "name": "Superlists",
+    "description": "Simple To-Do App",
+    "repository": "https://github.com/sfarzy/superlists",
+    "keywords": ["python", "Django", "To-Do"],
+    "scripts": {
+        "postdeploy": "python manage.py migrate --noinput"
+    }
+}
