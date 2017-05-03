@@ -1,6 +1,6 @@
 .. class:: no-web no-pdf
 
-|travis| |heroku| |coveralls| |heroku_deploy|
+|travis| |heroku| |coveralls|
 
 
 Superlists
@@ -42,11 +42,26 @@ To run the functional test you should have the latest geckodriver_ for firefox i
 
   python manage.py test functional_tests
 
+Deploying
+---------
+
+Want to setup quickly, Simply deploy the app in heroku_ using the the following button. 
+
+|heroku_deploy|
+
+Make sure to configure the ``EMAIL_PASSWORD`` variable if you want to use the sign up process. If you're on gmail, generate an `app password`_ specific for this.
+
+::
+
+    heroku config:set EMAIL_PASSWORD='email-passoword'
+
 
 .. _virtualenvwrapper: https://virtualenvwrapper.readthedocs.io/en/latest/
 .. _virtualenv: https://pypi.python.org/pypi/virtualenv
 .. _venv: https://docs.python.org/3/library/venv.html
 .. _geckodriver: https://github.com/mozilla/geckodriver/releases/latest
+.. _heroku: https://heroku.com
+.. _app password: https://myaccount.google.com/apppasswords
 
 .. |travis| image:: https://travis-ci.org/sfarzy/superlists.svg?branch=master
     :target: https://travis-ci.org/sfarzy/superlists
