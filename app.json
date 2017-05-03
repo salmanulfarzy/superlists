@@ -2,6 +2,7 @@
     "name": "Superlists",
     "description": "Simple To-Do App",
     "repository": "https://github.com/sfarzy/superlists",
+    "logo": "https://raw.githubusercontent.com/sfarzy/superlists/master/favicon.ico",
     "keywords": ["python", "Django", "To-Do"],
     "scripts": {
         "postdeploy": "python manage.py migrate --noinput"
