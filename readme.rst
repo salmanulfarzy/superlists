@@ -4,13 +4,13 @@
 
 
 Superlists
-=========
+==========
 
 Simple Django to-do app.
 
 
 Installation
----------
+------------
 
 Follow the below steps to set it up on a machine. Preferably manage python packages using virtual environments like virtualenvwrapper_ , virtualenv_ or venv_ which comes with ``python >= 3.3``
 
@@ -18,12 +18,14 @@ Follow the below steps to set it up on a machine. Preferably manage python packa
 
   git clone https://github.com/sfarzy/superlists.git
   cd superlists
-  pip install -r requirements.txt
+  pip install -r test-requirements.txt
   python manage.py makemigrations
   python manage.py migrate
   python manage.py collectstatic --noinput
   python manage.py runserver
 
+
+There are two requirements file. ``requirements.txt`` is used to deploy the app in heroku and ``test-requirements.txt`` are the dependencies for local testing and development.
 
 Testing
 -------
@@ -32,15 +34,15 @@ To run the unit tests.
 
 ::
 
-  python manage.py test lists, accounts
-  
-To run the functional test you should have the latest geckodriver_ for firefox installed. 
+  python manage.py test lists accounts
+
+To run the functional test you should have the latest geckodriver_ for firefox installed. Also make sure you're using ``selenium`` version specified in the geckodriver_ release page.
 
 ::
 
   python manage.py test functional_tests
-  
-  
+
+
 .. _virtualenvwrapper: https://virtualenvwrapper.readthedocs.io/en/latest/
 .. _virtualenv: https://pypi.python.org/pypi/virtualenv
 .. _venv: https://docs.python.org/3/library/venv.html
