@@ -16,7 +16,7 @@ Follow the below steps to set it up on a machine. Preferably manage python packa
 
 .. code::
 
-  git clone https://github.com/sfarzy/superlists.git
+  git clone https://github.com/salmanulfarzy/superlists.git
   cd superlists
   pip install -r test-requirements.txt
   python manage.py makemigrations
@@ -63,16 +63,16 @@ Make sure to configure the ``EMAIL_PASSWORD`` variable if you want to use the si
 .. _heroku: https://heroku.com
 .. _app password: https://myaccount.google.com/apppasswords
 
-.. |travis| image:: https://travis-ci.org/sfarzy/superlists.svg?branch=master
-    :target: https://travis-ci.org/sfarzy/superlists
+.. |travis| image:: https://travis-ci.org/salmanulfarzy/superlists.svg?branch=master
+    :target: https://travis-ci.org/salmanulfarzy/superlists
     :alt: travis
 
 .. |heroku| image:: https://img.shields.io/badge/heroku-deployed-blue.svg
       :target: https://sfarzy-superlists.herokuapp.com
       :alt: Heroku
 
-.. |coveralls| image:: https://coveralls.io/repos/github/sfarzy/superlists/badge.svg?branch=master
-      :target: https://coveralls.io/github/sfarzy/superlists?branch=master
+.. |coveralls| image:: https://coveralls.io/repos/github/salmanulfarzy/superlists/badge.svg?branch=master
+      :target: https://coveralls.io/github/salmanulfarzy/superlists?branch=master
       :alt: Coveralls
 
 .. |heroku_deploy| image:: https://www.herokucdn.com/deploy/button.svg
