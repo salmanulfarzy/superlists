@@ -5,6 +5,7 @@ from accounts.models import Token
 
 User = auth.get_user_model()
 
+
 class UserModelTest(TestCase):
 
     def test_user_is_valid_with_email_only(self):
@@ -28,4 +29,3 @@ class TokenModelTest(TestCase):
         token1 = Token.objects.create(email='a@b.com')
         token2 = Token.objects.create(email='a@b.com')
         self.assertNotEqual(token1.uid, token2.uid)
-

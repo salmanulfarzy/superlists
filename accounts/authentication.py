@@ -17,4 +17,3 @@ class PasswordlessAuthenticationBackend(object):
             return User.objects.get(email=email)
         except User.DoesNotExist:
             return None
-
