@@ -45,7 +45,7 @@ To run the functional test you should have the latest geckodriver_ for firefox i
 Deploying
 ---------
 
-Want to setup quickly, Simply deploy the app in heroku_ using the the following button. 
+Want to setup quickly, Simply deploy the app in heroku_ using the the following button.
 
 |heroku_deploy|
 
@@ -64,7 +64,7 @@ Make sure to configure the ``EMAIL_PASSWORD`` variable if you want to use the si
 .. _app password: https://myaccount.google.com/apppasswords
 
 .. |travis| image:: https://travis-ci.org/salmanulfarzy/superlists.svg?branch=master
-    :target: https://travis-ci.org/salmanulfarzy/superlists
+    :target: https://travis-ci.org/salmanulfarzy/superlists.svg?branch=master
     :alt: travis
 
 .. |heroku| image:: https://img.shields.io/badge/heroku-deployed-blue.svg
