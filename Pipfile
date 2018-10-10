@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+gunicorn = "==19.7.1"
+dj-database-url = "==0.4.2"
+"psycopg2" = "==2.7.1"
+whitenoise = "==2.0.6"
+Django = "~=1.11.15"
+pkg-resources = "==0.0.0"
+
+[dev-packages]
+selenium = "==3.4.1"
+pytz = "==2016.10"
+
+[requires]
+python_version = "3.6"
